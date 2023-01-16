@@ -1,0 +1,17 @@
+# # ---------------------------------------------------------------------
+# GET /healthcheck/app/status
+#  稼働確認(APP)
+# ---------------------------------------------------------------------
+### 正常ケース
+GET http://localhost:8092/api/healthcheck/app/status
+Content-Type: application/json
+Accept: application/json
+
+# # ---------------------------------------------------------------------
+# GET /healthcheck/db/status
+#  稼働確認(DB)
+# ---------------------------------------------------------------------
+### 正常ケース
+GET http://localhost:8092/api/healthcheck/db/status
+Content-Type: application/json
+Accept: application/json
