@@ -18,9 +18,6 @@ public class BlogEntity {
   @Id
   private String id;
 
-  @Column(name = "USER_ID")
-  private String userId;
-
   @Column(name = "TITLE")
   private String title;
   
@@ -30,9 +27,12 @@ public class BlogEntity {
   @Column(name = "POSTED_AT")
   private OffsetDateTime postedAt;
 
-  public BlogEntity(String id, String userId, String title, String body, OffsetDateTime postedAt) {
+  @Column(name = "POSTED_BY")
+  private String postedBy;
+
+  public BlogEntity(String id, String postedBy, String title, String body, OffsetDateTime postedAt) {
     this.id = id;
-    this.userId = userId;
+    this.postedBy = postedBy;
     this.title = title;
     this.body = body;
     this.postedAt = postedAt;

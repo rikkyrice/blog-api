@@ -4,15 +4,14 @@ import java.time.OffsetDateTime;
 
 import javax.validation.constraints.NotNull;
 
+import com.sample.blog.app.api.domain.user.User;
+
 import lombok.Getter;
 
 @Getter
 public class Blog {
   @NotNull
   private String id;
-
-  @NotNull
-  private String userId;
 
   @NotNull
   private String title;
@@ -23,9 +22,12 @@ public class Blog {
   @NotNull
   private OffsetDateTime postedAt;
 
-  public Blog(String id, String userId, String title, String body, OffsetDateTime postedAt) {
+  @NotNull
+  private User postedBy;
+
+  public Blog(String id, User postedBy, String title, String body, OffsetDateTime postedAt) {
     this.id = id;
-    this.userId = userId;
+    this.postedBy = postedBy;
     this.title = title;
     this.body = body;
     this.postedAt = postedAt;
