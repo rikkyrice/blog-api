@@ -11,7 +11,7 @@ import lombok.Getter;
 @Getter
 public class Blog {
   @NotNull
-  private String id;
+  private Integer id;
 
   @NotNull
   private String title;
@@ -25,7 +25,7 @@ public class Blog {
   @NotNull
   private User postedBy;
 
-  public Blog(String id, User postedBy, String title, String body, OffsetDateTime postedAt) {
+  public Blog(Integer id, User postedBy, String title, String body, OffsetDateTime postedAt) {
     this.id = id;
     this.postedBy = postedBy;
     this.title = title;

@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BlogEntity {
   @Id
-  private String id;
+  private Integer id;
 
   @Column(name = "TITLE")
   private String title;
@@ -30,7 +30,7 @@ public class BlogEntity {
   @Column(name = "POSTED_BY")
   private String postedBy;
 
-  public BlogEntity(String id, String postedBy, String title, String body, OffsetDateTime postedAt) {
+  public BlogEntity(Integer id, String postedBy, String title, String body, OffsetDateTime postedAt) {
     this.id = id;
     this.postedBy = postedBy;
     this.title = title;
